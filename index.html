@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./lemon.ico" type="image/x-icon" />
+    <title>50 Projects</title>
+    <link rel="stylesheet" href="./common.css" />
+    <style media="screen and (min-width: 50px)">
+        .link-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    </style>
+    <style media="screen and (min-width: 750px)">
+        .link-list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    </style>
+    <style media="screen and (min-width: 960px)">
+        .link-list {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    </style>
+    <style media="screen and (min-width: 1380px)">
+        .link-list {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    </style>
+
+    <style>
+        .title {
+            width: 230px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .title:hover {
+            color: #fff;
+            transition: color 300ms;
+            cursor: default;
+        }
+
+        .link-list {
+            list-style: none;
+            display: grid;
+            column-gap: 50px;
+            row-gap: 30px;
+        }
+
+        a {
+            font-size: 18px;
+            color: #aaa;
+            text-decoration: none;
+            transition: color 300ms;
+        }
+
+        a:visited {
+            color: #aaa;
+        }
+
+        a:hover {
+            color: #CD7F32;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">50 PROJECTS</h1>
+    <ul id="list" class="link-list"></ul>
+</body>
+
+</html>
+
+<script>
+    let arr = [
+        { title: '1. Expanding Cards', url: 'expanding-cards/' },
+        { title: '2. Progress Steps', url: 'progress-steps/' },
+        { title: '3. Rotating Navigation Animation', url: 'rotating-navigation-animation/' },
+        { title: '4. Hidden Search Widget', url: 'hidden-search-widget/' },
+        { title: '5. Blurry Loading', url: 'blurry-loading/' },
+        { title: '6. Scroll Animation', url: 'scroll-animation/' },
+        { title: '7. Split Landing Page', url: 'split-landing-page/' },
+        { title: '8. Form Input Wave', url: 'form-input-wave/' },
+        { title: '9. Sound Board', url: 'sound-board/' },
+        { title: '10. Dad Jokes', url: 'dad-jokes/' },
+        { title: '11. Event KeyCodes', url: 'event-keycodes/' },
+        { title: '12. FAQ', url: 'faq/' },
+        { title: '13. Random Choice Picker', url: 'random-choice-picker/' },
+        { title: '14. Animated Navigation', url: 'animated-navigation/' },
+        { title: '15. Increment Counter', url: 'increment-counter/' },
+    ]
+    let projectList = ''
+    let myUlCollection = document.getElementById('list')
+    projectList = arr.map((item, index) => {return `<li><a href="${item.url}">${item.title}</a></li>`}).join('')
+    myUlCollection.innerHTML = projectList
+</script>
