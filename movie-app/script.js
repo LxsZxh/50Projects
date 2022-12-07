@@ -49,14 +49,14 @@ function getClassByRate(vote) {
   }
 }
 
-form.addEventListener('submit',(e)=>{
-    e.preventDefault() // 组阻止表单提交时重新加载页面
-    console.log(e.preventDefault())
-    const searchTerm=search.value
-    if(searchTerm && searchTerm!==''){
-        getMovies(SEARCH_API + searchTerm)
-        search.value=''
-    }else{
-        window.location.reload()
-    }
+form.addEventListener('submit', e => {
+  e.preventDefault() // 组阻止表单提交时重新加载页面
+  console.log(e.preventDefault())
+  const searchTerm = search.value
+  if (searchTerm && searchTerm !== '') {
+    getMovies(SEARCH_API + searchTerm)
+    search.value = ''
+  } else {
+    window.location.reload()
+  }
 })
