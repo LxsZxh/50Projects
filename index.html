@@ -30,14 +30,29 @@
     </style>
 
     <style>
+        .bg-content {
+            background-image: url(./home-bg.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            z-index: -1;
+            filter: blur(0.5px);
+        }
+
         .title {
             width: 230px;
-            margin: 40px auto;
+            margin: 80px auto 80px;
             text-align: center;
+            color: rgb(231, 229, 229);
         }
 
         .title:hover {
-            color: #fff;
+            color: rgb(62 119 154);
             transition: color 300ms;
             cursor: default;
         }
@@ -50,25 +65,30 @@
         }
 
         a {
-            font-size: 18px;
-            color: #aaa;
+            font-size: 20px;
+            color:  rgb(231, 229, 229);
             text-decoration: none;
             transition: color 300ms;
+            font-weight: bold;
         }
 
         a:visited {
-            color: #aaa;
+            color: rgb(231, 229, 229);
         }
 
         a:hover {
-            color: #CD7F32;
+            color: rgb(62 119 154);
         }
     </style>
 </head>
 
 <body>
-    <h1 class="title">50 PROJECTS</h1>
-    <ul id="list" class="link-list"></ul>
+    <div class="bg-content"></div>
+    <div class="content">
+        <h1 class="title">50 PROJECTS</h1>
+        <ul id="list" class="link-list"></ul>
+    </div>
+
 </body>
 
 </html>
@@ -95,7 +115,7 @@
         { title: '18. Background Slider', url: 'background-slider/' },
         { title: '19. Theme Clock', url: 'theme-clock/' },
         { title: '20. Button Ripple Effect', url: 'button-ripple-effect/' },
-        { title: '21. Drag N Drop', url: 'drag-n-drop/' }, 
+        { title: '21. Drag N Drop', url: 'drag-n-drop/' },
         { title: '22. Drawing App', url: 'drawing-app/' },
         { title: '23. Kinetic Loader', url: 'kinetic-loader/' },
         { title: '24. Content Placeholder', url: 'content-placeholder/' },
